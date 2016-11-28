@@ -36,6 +36,8 @@ module ToW_tb;
 	 repeat(100) @(posedge clk); 
     rst=0;
 	 
+	 wait(leds_out == 7'b0000000);
+	 
 	 //setup inputs for next test getting from N to R1
 	 @(posedge clk); #1;
 	 rst = 0; pbr = 1; pbl = 0;
@@ -126,7 +128,6 @@ module ToW_tb;
 	 $display("\nTesting N\n leds_out = %d", leds_out);
 	 rst = 0; pbl = 0; pbr = 0;
 	 
-	 $finish;
   end
   
   fullTop fullTopInst(.pbl(pbl), .pbr(pbr), .clk(clk), .rst(rst), .leds_out(leds_out));

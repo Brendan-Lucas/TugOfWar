@@ -25,7 +25,7 @@ module fullTop(pbl, pbr, clk, rst, leds_out);
 	wire [6:0] score; wire [1:0] led_control;
 	
 	LEDMux A(.led_control(led_control), .score(score), .leds_out(leds_out));
-	scorer scoreInst(.winrnd(winrnd), .right(right), .leds_on(leds_on), .clk(clk), .rst(rst), .score(score)); // .tie(tie) removed
+	scorer scoreInst(.winrnd(winrnd), .right(right), .leds_on(leds_on), .clk(clk), .rst(rst), .tie(tie), .score(score)); // .tie(tie) removed
 	topPblPbr PblPbrInst(.pbl(pbl), .pbr(pbr), .clr(clr), .clk(clk), .rst(rst), .winrnd(winrnd), .right(right), .tie(tie));
 	topClrLed clrLedInst(.rst(rst), .clk(clk), .winrnd(winrnd), .leds_on(leds_on), .clear(clear), .led_control(led_control));
 

@@ -12,6 +12,7 @@
 //----------------------------------------------------------------------------------------
 
 module scorer(winrnd, right, leds_on, clk, rst, tie, score);
+	`define RST		10
 	`define WR     1
 	`define R3     2
    `define R2     3   
@@ -28,14 +29,16 @@ module scorer(winrnd, right, leds_on, clk, rst, tie, score);
 	input right;		// indicates who was pushed first 
 	input leds_on;		// used to indicate whether the light's were on to determine a jump-the-light
 	input winrnd;		// one-cycle pulse that someone has pushed
-	output [6:0] score;	//  MSB 5 [WL L2 L1 0 R1 R2 WR] LSB 0
+	input tie;
+	output [6:0] score; 	//  MSB 5 [WL L2 L1 0 R1 R2 WR] LSB 0
 	
+	reg[6:0] score;
 	reg [3:0] state;	// One of WL, WR, L1, L2, L3, R1, R2, R3 or ERROR
 	reg [3:0] nxtstate;	// C/L
 
 	// SYNCHRONOUS STATE ASSIGNMENT ---------------------------------------------
 	always @(posedge clk or posedge rst)
-   		if (rst) state <= `N;
+   		if (rst) state <= `RST;
    		else state <= nxtstate;
 	
     // ========================================================================
@@ -47,11 +50,13 @@ module scorer(winrnd, right, leds_on, clk, rst, tie, score);
 	// move right if right pushed properly, or if left pushed improperly
 	assign mr = (right & leds_on) | (~right & ~leds_on);
 
-	always @(state or mr or leds_on or winrnd) begin
-		nxtstate = state;
+	always @(state or mr or leds_on or winrnd) 
+	begin
+	     nxtstate = state;
         if(winrnd) begin
     		if(leds_on)         // Proper pushes (uses favour the loser options)
     			case(state)
+				`RST:	nxtstate = `N;
     			`N:	if(mr) nxtstate = `R1; else nxtstate = `L1;	
     			`L1:	if(mr) nxtstate = `N;  else nxtstate = `L2;
     			`L2:	if(mr) nxtstate = `L1; else nxtstate = `L3;
@@ -65,6 +70,7 @@ module scorer(winrnd, right, leds_on, clk, rst, tie, score);
     			endcase
     		else	            // the leds were off, player jumped the light
     			case(state)
+				`RST: nxtstate = `N;
     			`N:	if(mr) nxtstate = `R1; else nxtstate= `L1;	
     			`L1:	if(mr) nxtstate = `N;  else nxtstate = `L2;
     			`L2:	if(mr) nxtstate = `L1; else nxtstate = `L3;
@@ -83,6 +89,7 @@ module scorer(winrnd, right, leds_on, clk, rst, tie, score);
     // output logic - what value of 'score' should show based on the internal state
 	always @(state)	
 		case(state)
+		`RST: score = 7'b1100011;
 		`N:	score = 7'b0001000;
 		`L1:	score = 7'b0010000;
 		`L2:	score = 7'b0100000;
