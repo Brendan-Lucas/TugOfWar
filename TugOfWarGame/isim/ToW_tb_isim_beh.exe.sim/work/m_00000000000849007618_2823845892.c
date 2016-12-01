@@ -21,7 +21,8 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "//ugradfs/brendanlucas/win/ELEC3500/TugOfWar-master/TugOfWarGame/OPP.v";
+static const char *ng0 = "C:/Users/alokdeshpande/Documents/TugOfWar-master/TugOfWar-master/TugOfWarGame/OPP.v";
+static int ng1[] = {0, 0};
 
 
 
@@ -220,13 +221,20 @@ LAB10:    t36 = *((unsigned int *)t24);
 
 }
 
-static void Always_28_1(char *t0)
+static void Always_30_1(char *t0)
 {
     char *t1;
     char *t2;
     char *t3;
     char *t4;
     char *t5;
+    unsigned int t6;
+    unsigned int t7;
+    unsigned int t8;
+    unsigned int t9;
+    unsigned int t10;
+    char *t11;
+    char *t12;
 
 LAB0:    t1 = (t0 + 1772U);
     t2 = *((char **)t1);
@@ -235,7 +243,7 @@ LAB0:    t1 = (t0 + 1772U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(28, ng0);
+LAB2:    xsi_set_current_line(30, ng0);
     t2 = (t0 + 1976);
     *((int *)t2) = 1;
     t3 = (t0 + 1800);
@@ -243,21 +251,40 @@ LAB2:    xsi_set_current_line(28, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(29, ng0);
+LAB4:    xsi_set_current_line(31, ng0);
 
-LAB5:    xsi_set_current_line(30, ng0);
-    t4 = (t0 + 876U);
+LAB5:    xsi_set_current_line(32, ng0);
+    t4 = (t0 + 784U);
     t5 = *((char **)t4);
-    t4 = (t0 + 1104);
-    xsi_vlogvar_assign_value(t4, t5, 0, 0, 1);
-    goto LAB2;
+    t4 = (t5 + 4);
+    t6 = *((unsigned int *)t4);
+    t7 = (~(t6));
+    t8 = *((unsigned int *)t5);
+    t9 = (t8 & t7);
+    t10 = (t9 != 0);
+    if (t10 > 0)
+        goto LAB6;
+
+LAB7:    xsi_set_current_line(33, ng0);
+    t2 = (t0 + 876U);
+    t3 = *((char **)t2);
+    t2 = (t0 + 1104);
+    xsi_vlogvar_assign_value(t2, t3, 0, 0, 1);
+
+LAB8:    goto LAB2;
+
+LAB6:    xsi_set_current_line(32, ng0);
+    t11 = ((char*)((ng1)));
+    t12 = (t0 + 1104);
+    xsi_vlogvar_assign_value(t12, t11, 0, 0, 1);
+    goto LAB8;
 
 }
 
 
 extern void work_m_00000000000849007618_2823845892_init()
 {
-	static char *pe[] = {(void *)Cont_26_0,(void *)Always_28_1};
+	static char *pe[] = {(void *)Cont_26_0,(void *)Always_30_1};
 	xsi_register_didat("work_m_00000000000849007618_2823845892", "isim/ToW_tb_isim_beh.exe.sim/work/m_00000000000849007618_2823845892.didat");
 	xsi_register_executes(pe);
 }

@@ -26,7 +26,7 @@ module Div256(clk, rst, slowen);
 	always @(posedge clk)
 	begin
 		if (rst) count <= 8'b00000000;
-		else if(count == 8'b11111111) count = 8'b00000000;
+		else if(count == 8'b11111111) count <= 8'b00000000;
 		else count<= count + 8'b00000001;
 	end
 

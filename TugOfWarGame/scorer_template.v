@@ -39,8 +39,7 @@ module scorer(winrnd, right, leds_on, clk, rst, tie, score);
 	// SYNCHRONOUS STATE ASSIGNMENT ---------------------------------------------
 	always @(posedge clk or posedge rst)
    		if (rst) state <= `RST;
-   		else state <= nxtstate;
-	
+   		else  state <= nxtstate;
     // ========================================================================
     // 
     //  Next State logic:  Determine next-state of scorer based on current state and inputs
@@ -49,40 +48,49 @@ module scorer(winrnd, right, leds_on, clk, rst, tie, score);
     wire mr;            
 	// move right if right pushed properly, or if left pushed improperly
 	assign mr = (right & leds_on) | (~right & ~leds_on);
-
-	always @(state or mr or leds_on or winrnd) 
+	always @(rst)
+		$display ("Reset called");
+	
+	always @(state or mr or leds_on or winrnd or rst) 
 	begin
 	     nxtstate = state;
-        if(winrnd) begin
-    		if(leds_on)         // Proper pushes (uses favour the loser options)
-    			case(state)
-				`RST:	nxtstate = `N;
-    			`N:	if(mr) nxtstate = `R1; else nxtstate = `L1;	
-    			`L1:	if(mr) nxtstate = `N;  else nxtstate = `L2;
-    			`L2:	if(mr) nxtstate = `L1; else nxtstate = `L3;
-    			`L3:	if(mr) nxtstate = `L1; else nxtstate = `WL;
-    			`R1:	if(mr) nxtstate = `R2; else nxtstate = `N;
-    			`R2:	if(mr) nxtstate = `R3; else nxtstate = `R1;
-    			`R3:	if(mr) nxtstate = `WR; else nxtstate = `R1;
-    			`WL:	nxtstate = `WL;
-    			`WR:	nxtstate = `WR;
-    			default: nxtstate = `ERROR;
-    			endcase
-    		else	            // the leds were off, player jumped the light
-    			case(state)
-				`RST: nxtstate = `N;
-    			`N:	if(mr) nxtstate = `R1; else nxtstate= `L1;	
-    			`L1:	if(mr) nxtstate = `N;  else nxtstate = `L2;
-    			`L2:	if(mr) nxtstate = `L1; else nxtstate = `L3;
-    			`L3:	if(mr) nxtstate = `L2; else nxtstate = `WL;
-    			`R1:	if(mr) nxtstate = `R2; else nxtstate = `N;
-    			`R2:	if(mr) nxtstate = `R3; else nxtstate = `R1;
-    			`R3:	if(mr) nxtstate = `WR; else nxtstate = `R2;
-    			`WL:	nxtstate = `WL;
-    			`WR:	nxtstate = `WR;
-    			default: nxtstate = `ERROR;
-    			endcase
-        end
+		  if (tie) 
+				nxtstate = state;
+        else if(winrnd) 
+		  begin
+				if(leds_on)         // Proper pushes (uses favour the loser options)
+					case(state)
+					`RST:	nxtstate = `N;
+					`N:	if(mr) nxtstate = `R1; else nxtstate = `L1;	
+					`L1:	if(mr) nxtstate = `N;  else nxtstate = `L2;
+					`L2:	if(mr) nxtstate = `L1; else nxtstate = `L3;
+					`L3:	if(mr && leds_on) nxtstate = `L1; else if(mr) nxtstate = `L2; else nxtstate = `WL;
+					`R1:	if(mr) nxtstate = `R2; else nxtstate = `N;
+					`R2:	if(mr) nxtstate = `R3; else nxtstate = `R1;
+					`R3:	if(mr) nxtstate = `WR; else if (leds_on) nxtstate = `R1; else nxtstate = `R2;
+					`WL:	nxtstate = `WL;
+					`WR:	nxtstate = `WR;
+					default: nxtstate = `ERROR;
+					endcase
+			end
+			else
+				if (state == `RST)
+					nxtstate = `N;
+				else nxtstate = state;
+				/*else	            // the leds were off, player jumped the light
+					case(state)
+					`RST: nxtstate = `N;
+					`N:	if(mr) nxtstate = `R1; else nxtstate = `L1;	
+					`L1:	if(mr) nxtstate = `N;  else nxtstate = `L2;
+					`L2:	if(mr) nxtstate = `L1; else nxtstate = `L3;
+					`L3:	if(mr) nxtstate = `L2; else nxtstate = `WL;
+					`R1:	if(mr) nxtstate = `R2; else nxtstate = `N;
+					`R2:	if(mr) nxtstate = `R3; else nxtstate = `R1;
+					`R3:	if(mr) nxtstate = `WR; else nxtstate = `R2;
+					`WL:	nxtstate = `WL;
+					`WR:	nxtstate = `WR;
+					default: nxtstate = `ERROR;
+					endcase*/
     end
 
 

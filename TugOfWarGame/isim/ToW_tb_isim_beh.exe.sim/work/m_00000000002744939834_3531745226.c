@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "//ugradfs/brendanlucas/win/ELEC3500/TugOfWar-master/TugOfWarGame/Div256.v";
+static const char *ng0 = "C:/Users/alokdeshpande/Documents/TugOfWar-master/TugOfWar-master/TugOfWarGame/Div256.v";
 static unsigned int ng1[] = {255U, 0U};
 static unsigned int ng2[] = {0U, 0U};
 static unsigned int ng3[] = {1U, 0U};
@@ -256,7 +256,7 @@ LAB11:    t21 = (t13 + 4);
 LAB13:    xsi_set_current_line(29, ng0);
     t28 = ((char*)((ng2)));
     t29 = (t0 + 1012);
-    xsi_vlogvar_assign_value(t29, t28, 0, 0, 8);
+    xsi_vlogvar_wait_assign_value(t29, t28, 0, 0, 8, 0LL);
     goto LAB15;
 
 }

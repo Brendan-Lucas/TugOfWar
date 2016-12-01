@@ -21,8 +21,8 @@
 module ToW_tb;
 
   reg pbl, pbr, clk, rst;
-  wire [6:0] leds_out; 
-
+  wire [6:0] leds_out; //wire [6:0] score;
+  wire clock_div;
   always #976563 clk<=~clk;
   
   initial begin 
@@ -37,8 +37,10 @@ module ToW_tb;
     rst=0;
 	 
 	 wait(leds_out == 7'b0000000);
+	 //$display("\nScore is: = %d", score);
+	 wait(leds_out == 7'b0001000);
 	 
-	 //setup inputs for next test getting from N to R1
+	 //setup inputs for next test getting from N to R1 
 	 @(posedge clk); #1;
 	 rst = 0; pbr = 1; pbl = 0;
 	 wait(leds_out == 7'b0000100);
@@ -129,10 +131,10 @@ module ToW_tb;
 	 rst = 0; pbl = 0; pbr = 0;
 	 
   end
-  
-  fullTop fullTopInst(.pbl(pbl), .pbr(pbr), .clk(clk), .rst(rst), .leds_out(leds_out));
+
+  fullTop fullTopInst(.pbl(pbl), .pbr(pbr), .CLK_I(clk), .rst(rst), .clock_div(clock_div), .leds_out(leds_out));
 
 endmodule
-
+//.score(score), 
 //TODO: make leds out blink at all victories. at all winrnd's
 //TODO: make reset dipslay student number thing on leds_out, code in LED_MUX or scorer
