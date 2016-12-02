@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Dec 01 21:32:02 2016
+
+drc -z fullTop.ncd fullTop.pcf
+
+DRC detected 0 errors and 0 warnings.
