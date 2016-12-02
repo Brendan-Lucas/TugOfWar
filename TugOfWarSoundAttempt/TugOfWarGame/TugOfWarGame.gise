@@ -22,6 +22,11 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="TugOfWarGame.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Div256.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Div256.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Div256.xst"/>
+    <file xil_pn:fileType="FILE_CMD" xil_pn:name="_impact.cmd"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="_impact.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -49,6 +54,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="fullTop.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="fullTop.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="fullTop.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="fullTop_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="fullTop_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="fullTop_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="fullTop_map.mrp" xil_pn:subbranch="Map"/>
@@ -102,7 +108,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1480659301" xil_pn:in_ck="4277619583753438362" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-3060329866509871429" xil_pn:start_ts="1480659295">
+    <transform xil_pn:end_ts="1480662627" xil_pn:in_ck="4277619583753438362" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-3060329866509871429" xil_pn:start_ts="1480662620">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -124,7 +130,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1480659413" xil_pn:in_ck="-7875955074810151579" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-7905218279626602003" xil_pn:start_ts="1480659409">
+    <transform xil_pn:end_ts="1480662631" xil_pn:in_ck="-7875955074810151579" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-7905218279626602003" xil_pn:start_ts="1480662627">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -133,10 +139,12 @@
       <outfile xil_pn:name="fullTop.ngd"/>
       <outfile xil_pn:name="fullTop_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1480659423" xil_pn:in_ck="-7875955074810151578" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="4245753365082497697" xil_pn:start_ts="1480659413">
+    <transform xil_pn:end_ts="1480662641" xil_pn:in_ck="-7875955074810151578" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="4245753365082497697" xil_pn:start_ts="1480662631">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="fullTop.pcf"/>
       <outfile xil_pn:name="fullTop_map.map"/>
@@ -147,7 +155,7 @@
       <outfile xil_pn:name="fullTop_summary.xml"/>
       <outfile xil_pn:name="fullTop_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1480659436" xil_pn:in_ck="8535778030260490111" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1480659423">
+    <transform xil_pn:end_ts="1480662654" xil_pn:in_ck="8535778030260490111" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1480662641">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
@@ -161,7 +169,7 @@
       <outfile xil_pn:name="fullTop_pad.txt"/>
       <outfile xil_pn:name="fullTop_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1480659458" xil_pn:in_ck="161807808056551273" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1480659447">
+    <transform xil_pn:end_ts="1480662664" xil_pn:in_ck="161807808056551273" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1480662654">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -173,7 +181,13 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1480659436" xil_pn:in_ck="-7875955074810151710" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1480659431">
+    <transform xil_pn:end_ts="1480662955" xil_pn:in_ck="161807849383513427" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1480662953">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_impact.cmd"/>
+      <outfile xil_pn:name="_impact.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1480662654" xil_pn:in_ck="-7875955074810151710" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1480662649">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

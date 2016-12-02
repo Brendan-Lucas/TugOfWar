@@ -1,8 +1,9 @@
 `timescale 1ns / 1ps
 
-module audio(clk,rst,speaker,gain,en);
+module audio(clk, rst, score, speaker, gain, en);
 
-input clk, rst;
+input clk, rst; 
+input [6:0] score;
 output speaker, gain, en;
 parameter clkdivider = 500/440/2;
 reg [14:0] counter;
@@ -11,10 +12,12 @@ reg [23:0] tone;
 reg speaker;
 reg gain;
 reg en;
-
-always @(posedge clk or posedge rst) 
+wire win;
+assign win = score[2:0]==3'b111 || score[6:4]== 3'b111;
+always @(posedge clk or posedge rst or posedge win) 
 begin
-	if(rst)begin
+	if(rst || win)
+	begin
 		counter <= 0;
 		speaker <= 1;
 		gain <= 0;

@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Fri Dec 02 01:17:03 2016">
+<application name="pn" timeStamp="Fri Dec 02 02:10:41 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="F59CEAA02B5745038C1C5D3D0346CC1B" type="project"/>
-<property name="ProjectIteration" value="1" type="project"/>
+<property name="ProjectIteration" value="4" type="project"/>
 <property name="ProjectFile" value="C:/Users/germannagaev/Documents/GitHub/TugOfWar/TugOfWarSoundAttempt/TugOfWarGame/TugOfWarGame.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2016-12-01T18:29:14" type="project"/>
 </section>
@@ -25,7 +25,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2016-12-01T18:29:14" type="design"/>
 <property name="PROP_intWbtProjectID" value="F59CEAA02B5745038C1C5D3D0346CC1B" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="1" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="4" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_selectedSimRootSourceNode_behav" value="work.ToW_tb" type="process"/>

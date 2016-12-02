@@ -33,7 +33,7 @@ module MC(clk, rst, winrnd, rout, slowen, clear, leds_on, led_control);
 		nxt_st<=state;
 		case(state)
 			RESET: if(!rst) nxt_st <= Wait_a; else nxt_st <= RESET;
-			Wait_a: begin repeat (2) @(slowen); if(slowen) nxt_st <= Wait_b; else nxt_st <= Wait_a; end
+			Wait_a: if(slowen) nxt_st <= Wait_b; else nxt_st <= Wait_a; 
 			Wait_b: if(slowen) nxt_st <= Dark; else nxt_st <= Wait_b;
 			Dark: if(winrnd) nxt_st <= Gloat_a;else if(slowen && rout) nxt_st<=Play; else nxt_st <= Dark;
 			Play: if(winrnd) nxt_st <= Gloat_a; else nxt_st <= Play;

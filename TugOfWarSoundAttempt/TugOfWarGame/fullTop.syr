@@ -167,9 +167,9 @@ WARNING:HDLCompiler:91 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfW
 Elaborating module <LEDMux>.
 
 Elaborating module <audio>.
-WARNING:HDLCompiler:413 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 30: Result of 25-bit expression is truncated to fit in 24-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 36: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 37: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 33: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 39: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 40: Result of 25-bit expression is truncated to fit in 24-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -300,10 +300,11 @@ Unit <LEDMux> synthesized.
 Synthesizing Unit <audio>.
     Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v".
         clkdivider = 0
-    Found 1-bit register for signal <speaker>.
-    Found 15-bit register for signal <counter>.
+WARNING:Xst:647 - Input <score<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <gain>.
-    Found 15-bit subtractor for signal <GND_15_o_GND_15_o_sub_3_OUT<14:0>> created at line 36.
+    Found 15-bit register for signal <counter>.
+    Found 1-bit register for signal <speaker>.
+    Found 15-bit subtractor for signal <GND_15_o_GND_15_o_sub_5_OUT<14:0>> created at line 39.
     WARNING:Xst:2404 -  FFs/Latches <en<0:0>> (without init value) have a constant value of 1 in block <audio>.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -407,6 +408,8 @@ Optimizing FSM <FSM_1> on signal <state[1:4]> with gray encoding.
 Optimizing unit <fullTop> ...
 
 Optimizing unit <LFSR> ...
+
+Optimizing unit <audio> ...
 WARNING:Xst:1293 - FF/Latch <createCLKdivide/counter_17> has a constant value of 0 in block <fullTop>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <createCLKdivide/counter_18> has a constant value of 0 in block <fullTop>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <createCLKdivide/counter_19> has a constant value of 0 in block <fullTop>. This FF/Latch will be trimmed during the optimization process.
@@ -454,14 +457,14 @@ Top Level Output File Name         : fullTop.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 191
+# BELS                             : 194
 #      GND                         : 1
 #      INV                         : 16
 #      LUT1                        : 24
 #      LUT2                        : 5
-#      LUT3                        : 4
-#      LUT4                        : 19
-#      LUT5                        : 11
+#      LUT3                        : 3
+#      LUT4                        : 25
+#      LUT5                        : 9
 #      LUT6                        : 33
 #      MUXCY                       : 37
 #      VCC                         : 1
@@ -490,17 +493,17 @@ Selected Device : 6slx45csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              63  out of  54576     0%  
- Number of Slice LUTs:                  113  out of  27288     0%  
-    Number used as Logic:               112  out of  27288     0%  
+ Number of Slice LUTs:                  116  out of  27288     0%  
+    Number used as Logic:               115  out of  27288     0%  
     Number used as Memory:                1  out of   6408     0%  
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    120
-   Number with an unused Flip Flop:      57  out of    120    47%  
-   Number with an unused LUT:             7  out of    120     5%  
-   Number of fully used LUT-FF pairs:    56  out of    120    46%  
-   Number of unique control sets:         6
+ Number of LUT Flip Flop pairs used:    122
+   Number with an unused Flip Flop:      59  out of    122    48%  
+   Number with an unused LUT:             6  out of    122     4%  
+   Number of fully used LUT-FF pairs:    57  out of    122    46%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          16
@@ -542,9 +545,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.672ns (Maximum Frequency: 272.320MHz)
-   Minimum input arrival time before clock: 4.531ns
-   Maximum output required time after clock: 6.137ns
+   Minimum period: 3.722ns (Maximum Frequency: 268.651MHz)
+   Minimum input arrival time before clock: 4.745ns
+   Maximum output required time after clock: 6.042ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -553,10 +556,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'createCLKdivide/clk'
-  Clock period: 3.672ns (frequency: 272.320MHz)
-  Total number of paths / destination ports: 527 / 46
+  Clock period: 3.722ns (frequency: 268.651MHz)
+  Total number of paths / destination ports: 595 / 63
 -------------------------------------------------------------------------
-Delay:               3.672ns (Levels of Logic = 3)
+Delay:               3.722ns (Levels of Logic = 3)
   Source:            clrLedInst/topMC/state_FSM_FFd3 (FF)
   Destination:       scoreInst/state_FSM_FFd4 (FF)
   Source Clock:      createCLKdivide/clk rising
@@ -566,14 +569,14 @@ Delay:               3.672ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             11   0.447   1.111  clrLedInst/topMC/state_FSM_FFd3 (clrLedInst/topMC/state_FSM_FFd3)
+     FDC:C->Q             13   0.447   1.161  clrLedInst/topMC/state_FSM_FFd3 (clrLedInst/topMC/state_FSM_FFd3)
      LUT5:I2->O            5   0.205   0.715  scoreInst/mr1 (scoreInst/mr)
-     LUT5:I4->O            1   0.205   0.684  scoreInst/state_FSM_FFd4-In5_SW0 (N9)
+     LUT5:I4->O            1   0.205   0.684  scoreInst/state_FSM_FFd4-In5_SW0 (N10)
      LUT6:I4->O            1   0.203   0.000  scoreInst/state_FSM_FFd4-In5 (scoreInst/state_FSM_FFd4-In)
      FDC:D                     0.102          scoreInst/state_FSM_FFd4
     ----------------------------------------
-    Total                      3.672ns (1.162ns logic, 2.510ns route)
-                                       (31.6% logic, 68.4% route)
+    Total                      3.722ns (1.162ns logic, 2.560ns route)
+                                       (31.2% logic, 68.8% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_I'
@@ -602,28 +605,27 @@ Delay:               3.196ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'createCLKdivide/clk'
   Total number of paths / destination ports: 71 / 50
 -------------------------------------------------------------------------
-Offset:              4.531ns (Levels of Logic = 3)
+Offset:              4.745ns (Levels of Logic = 2)
   Source:            rst (PAD)
-  Destination:       scoreInst/state_FSM_FFd4 (FF)
+  Destination:       AuxOut/counter_14 (FF)
   Destination Clock: createCLKdivide/clk rising
 
-  Data Path: rst to scoreInst/state_FSM_FFd4
+  Data Path: rst to AuxOut/counter_14
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            64   1.222   1.868  rst_IBUF (rst_IBUF)
-     LUT5:I2->O            4   0.205   0.931  PblPbrInst/A/tie1 (tie)
-     LUT6:I2->O            1   0.203   0.000  scoreInst/state_FSM_FFd4-In5 (scoreInst/state_FSM_FFd4-In)
-     FDC:D                     0.102          scoreInst/state_FSM_FFd4
+     IBUF:I->O            48   1.222   1.864  rst_IBUF (rst_IBUF)
+     LUT5:I0->O           17   0.203   1.027  AuxOut/rst_win_OR_44_o (AuxOut/rst_win_OR_44_o)
+     FDCE:CLR                  0.430          AuxOut/gain
     ----------------------------------------
-    Total                      4.531ns (1.732ns logic, 2.799ns route)
-                                       (38.2% logic, 61.8% route)
+    Total                      4.745ns (1.855ns logic, 2.890ns route)
+                                       (39.1% logic, 60.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_I'
   Total number of paths / destination ports: 18 / 18
 -------------------------------------------------------------------------
-Offset:              3.291ns (Levels of Logic = 1)
+Offset:              3.171ns (Levels of Logic = 1)
   Source:            rst (PAD)
   Destination:       createCLKdivide/counter_0 (FF)
   Destination Clock: CLK_I rising
@@ -632,32 +634,32 @@ Offset:              3.291ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            64   1.222   1.639  rst_IBUF (rst_IBUF)
+     IBUF:I->O            48   1.222   1.519  rst_IBUF (rst_IBUF)
      FDC:CLR                   0.430          createCLKdivide/counter_0
     ----------------------------------------
-    Total                      3.291ns (1.652ns logic, 1.639ns route)
-                                       (50.2% logic, 49.8% route)
+    Total                      3.171ns (1.652ns logic, 1.519ns route)
+                                       (52.1% logic, 47.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'createCLKdivide/clk'
   Total number of paths / destination ports: 47 / 9
 -------------------------------------------------------------------------
-Offset:              6.137ns (Levels of Logic = 3)
-  Source:            clrLedInst/topMC/state_FSM_FFd2 (FF)
-  Destination:       leds_out<6> (PAD)
+Offset:              6.042ns (Levels of Logic = 3)
+  Source:            scoreInst/state_FSM_FFd2 (FF)
+  Destination:       leds_out<4> (PAD)
   Source Clock:      createCLKdivide/clk rising
 
-  Data Path: clrLedInst/topMC/state_FSM_FFd2 to leds_out<6>
+  Data Path: scoreInst/state_FSM_FFd2 to leds_out<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             12   0.447   1.137  clrLedInst/topMC/state_FSM_FFd2 (clrLedInst/topMC/state_FSM_FFd2)
-     LUT3:I0->O            3   0.205   0.995  A/_n0006<1>1 (A/_n0006)
-     LUT5:I0->O            1   0.203   0.579  A/Mmux_leds_out51 (leds_out_4_OBUF)
+     FDC:C->Q             15   0.447   1.210  scoreInst/state_FSM_FFd2 (scoreInst/state_FSM_FFd2)
+     LUT4:I1->O            1   0.205   0.827  scoreInst/state_score<4>1 (score<4>)
+     LUT4:I0->O            1   0.203   0.579  A/Mmux_leds_out51 (leds_out_4_OBUF)
      OBUF:I->O                 2.571          leds_out_4_OBUF (leds_out<4>)
     ----------------------------------------
-    Total                      6.137ns (3.426ns logic, 2.711ns route)
-                                       (55.8% logic, 44.2% route)
+    Total                      6.042ns (3.426ns logic, 2.616ns route)
+                                       (56.7% logic, 43.3% route)
 
 =========================================================================
 
@@ -677,20 +679,20 @@ Clock to Setup on destination clock createCLKdivide/clk
                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------+---------+---------+---------+---------+
-createCLKdivide/clk|    3.672|         |         |         |
+createCLKdivide/clk|    3.722|         |         |         |
 -------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.46 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.71 secs
  
 --> 
 
 Total memory usage is 282912 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   16 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

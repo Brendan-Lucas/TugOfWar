@@ -41,5 +41,5 @@ module fullTop(
 	topClrLed clrLedInst(.rst(rst), .clk(clk), .winrnd(winrnd), .leds_on(leds_on), .clear(clr), .led_control(led_control));
 	scorer scoreInst(.winrnd(winrnd), .right(right), .FTL_Right(FTL_Right), .FTL_Left(FTL_Left), .leds_on(leds_on), .clk(clk), .rst(rst), .tie(tie), .score(score)); 
 	LEDMux A(.led_control(led_control), .score(score), .leds_out(leds_out));
-	audio AuxOut(.clk(clk), .rst(rst), .speaker(speaker), .gain(gain), .en(en));
+	audio AuxOut(.clk(clk), .rst(rst), .score(score), .speaker(speaker), .gain(gain), .en(en));
 endmodule
