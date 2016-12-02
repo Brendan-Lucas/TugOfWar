@@ -33,9 +33,12 @@ NET "CLK_I" LOC = L15;
  
  NET "rst" LOC = "F5" ;  # Bank = 3, Pin name = IO_L55N_M3A14, 	   Sch name = BTNC
  
+ NET "FTL_Right" LOC = "A10";
+ NET "FTL_Left" LOC = "E4";
 
-
-
+ NET "speaker" LOC = "T3"; 
+ NET "gain" LOC = "R3"; 
+ NET "en" LOC = "N5"; 
  //NET "Btest" LOC = "P3";  # Bank = 3, Pin name = IO_L2N, 	   		   Sch name = BTND
 
  
