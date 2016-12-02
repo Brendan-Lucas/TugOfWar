@@ -24,9 +24,9 @@ module fullTop(
 	input CLK_I,
 	input FTL_Right,
 	input FTL_Left,
+	//for synthesis without the board
 	//input clk,
-	input rst, 
-	//output [6:0] score, 
+	input rst,  
 	output speaker, 
 	output en,
 	output gain, 

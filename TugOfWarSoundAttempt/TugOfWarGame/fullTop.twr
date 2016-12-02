@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (nt64)
+Release 14.7 Trace  (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
--n 3 -fastpaths -xml fullTop.twx fullTop.ncd -o fullTop.twr fullTop.pcf -ucf
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml fullTop.twx fullTop.ncd -o fullTop.twr fullTop.pcf -ucf
 atlys.ucf
 
 Design file:              fullTop.ncd
@@ -49,14 +49,14 @@ CLK_I          |    2.825|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Dec 02 02:10:52 2016 
+Analysis completed Fri Dec 02 15:38:00 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 299 MB
+Peak Memory Usage: 206 MB
 
 
 

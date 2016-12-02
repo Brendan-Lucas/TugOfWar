@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'fullTop'
 
 Design Information
@@ -10,7 +10,7 @@ Target Device  : xc6slx45
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Dec 02 02:10:32 2016
+Mapped Date    : Fri Dec 02 15:37:26 2016
 
 Design Summary
 --------------
@@ -88,9 +88,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.43
 
-Peak Memory Usage:  509 MB
-Total REAL time to MAP completion:  7 secs 
-Total CPU time to MAP completion:   7 secs 
+Peak Memory Usage:  377 MB
+Total REAL time to MAP completion:  11 secs 
+Total CPU time to MAP completion:   8 secs 
 
 Table of Contents
 -----------------
@@ -125,7 +125,8 @@ Section 3 - Informational
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
 '2100@134.117.38.248'.
 INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
-'12345@134.117.38.248;27010@134.117.38.248;'.
+'27000@localhost;C:\Modeltech_xe\win32xoem\license.dat;6053@licensesrv;7053@cmc-
+stc-01;1055@134.117.70.208;1718@licensesrv;1707@licensesrv.doe.carleton.ca'.
 INFO:Security:54 - 'xc6slx45' is a WebPack part.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew

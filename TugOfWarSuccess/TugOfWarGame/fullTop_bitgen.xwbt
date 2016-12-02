@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSuccess\TugOfWarGame\fullTop.ncd
-OUTFILE=C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSuccess\TugOfWarGame\fullTop.bit
-FAMILY=Spartan6
-PART=xc6slx45-3csg324
-WORKINGDIR=C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSuccess\TugOfWarGame
-LICENSE=ISE
-USER_INFO=175173618_175294968_210578120_628

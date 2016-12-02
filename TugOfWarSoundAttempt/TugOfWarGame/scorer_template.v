@@ -45,13 +45,6 @@ module scorer(winrnd, right, FTL_Right, FTL_Left, leds_on, clk, rst, tie, score)
    		if (rst) 
 			begin 
 				state = `RST;
-				/*repeat (5) 
-				begin
-					repeat (300) @(clk);
-					score = 7'b0000000;
-					repeat (300) @(clk);
-					score = 7'b1100011;
-				end*/
 			end
 			else  state = nxtstate;
     // ========================================================================
@@ -62,7 +55,6 @@ module scorer(winrnd, right, FTL_Right, FTL_Left, leds_on, clk, rst, tie, score)
     wire mr;            
 	// move right if right pushed properly, or if left pushed improperly
 	assign mr = (right & leds_on) | (~right & ~leds_on);
-	
 	
 	always @(state or mr or leds_on or winrnd or rst) 
 	begin
@@ -109,18 +101,3 @@ module scorer(winrnd, right, FTL_Right, FTL_Left, leds_on, clk, rst, tie, score)
 		endcase
 
 endmodule
-
-/*else	            // the leds were off, player jumped the light
-					case(state)
-					`RST: nxtstate = `N;
-					`N:	if(mr) nxtstate = `R1; else nxtstate = `L1;	
-					`L1:	if(mr) nxtstate = `N;  else nxtstate = `L2;
-					`L2:	if(mr) nxtstate = `L1; else nxtstate = `L3;
-					`L3:	if(mr) nxtstate = `L2; else nxtstate = `WL;
-					`R1:	if(mr) nxtstate = `R2; else nxtstate = `N;
-					`R2:	if(mr) nxtstate = `R3; else nxtstate = `R1;
-					`R3:	if(mr) nxtstate = `WR; else nxtstate = `R2;
-					`WL:	nxtstate = `WL;
-					`WR:	nxtstate = `WR;
-					default: nxtstate = `ERROR;
-					endcase*/

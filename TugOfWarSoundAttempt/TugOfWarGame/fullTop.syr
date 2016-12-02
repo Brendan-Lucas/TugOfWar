@@ -1,16 +1,16 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: fullTop.prj
 
@@ -105,31 +105,31 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\synchronizer.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\synchronizer.v" into library work
 Parsing module <synchronizer>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\PBL.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\PBL.v" into library work
 Parsing module <PBL>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\OPP.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\OPP.v" into library work
 Parsing module <OPP>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\MC.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\MC.v" into library work
 Parsing module <MC>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\LFSR.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\LFSR.v" into library work
 Parsing module <LFSR>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Div256.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Div256.v" into library work
 Parsing module <Div256>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\top_lab7.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\top_lab7.v" into library work
 Parsing module <topClrLed>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\topClr&leds.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\topClr&leds.v" into library work
 Parsing module <topPblPbr>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\scorer_template.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\scorer_template.v" into library work
 Parsing module <scorer>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\LEDMux.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\LEDMux.v" into library work
 Parsing module <LEDMux>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\clk_div.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\clk_div.v" into library work
 Parsing module <clk_div>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" into library work
 Parsing module <audio>.
-Analyzing Verilog file "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\fullTop.v" into library work
+Analyzing Verilog file "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\fullTop.v" into library work
 Parsing module <fullTop>.
 
 =========================================================================
@@ -151,38 +151,38 @@ Elaborating module <OPP>.
 Elaborating module <topClrLed>.
 
 Elaborating module <Div256>.
-WARNING:HDLCompiler:413 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Div256.v" Line 31: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Div256.v" Line 31: Result of 9-bit expression is truncated to fit in 8-bit target.
 
 Elaborating module <LFSR>.
 
 Elaborating module <MC>.
-WARNING:HDLCompiler:91 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\MC.v" Line 33: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\MC.v" Line 34: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\MC.v" Line 33: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\MC.v" Line 34: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <scorer>.
-WARNING:HDLCompiler:91 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\scorer_template.v" Line 70: Signal <tie> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\scorer_template.v" Line 79: Signal <FTL_Left> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:91 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\scorer_template.v" Line 82: Signal <FTL_Right> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\scorer_template.v" Line 62: Signal <tie> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\scorer_template.v" Line 71: Signal <FTL_Left> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\scorer_template.v" Line 74: Signal <FTL_Right> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 
 Elaborating module <LEDMux>.
 
 Elaborating module <audio>.
-WARNING:HDLCompiler:413 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 33: Result of 25-bit expression is truncated to fit in 24-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 39: Result of 32-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 40: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 33: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 39: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v" Line 40: Result of 25-bit expression is truncated to fit in 24-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <fullTop>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\fullTop.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\fullTop.v".
     Summary:
 	no macro.
 Unit <fullTop> synthesized.
 
 Synthesizing Unit <clk_div>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\clk_div.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\clk_div.v".
         sys_clk = 100000000
         clk_out = 500
         max = 100000
@@ -196,39 +196,39 @@ Synthesizing Unit <clk_div>.
 Unit <clk_div> synthesized.
 
 Synthesizing Unit <topPblPbr>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\topClr&leds.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\topClr&leds.v".
     Summary:
 	no macro.
 Unit <topPblPbr> synthesized.
 
 Synthesizing Unit <PBL>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\PBL.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\PBL.v".
     Summary:
 	no macro.
 Unit <PBL> synthesized.
 
 Synthesizing Unit <synchronizer>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\synchronizer.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\synchronizer.v".
     Found 1-bit register for signal <sypush>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <synchronizer> synthesized.
 
 Synthesizing Unit <OPP>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\OPP.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\OPP.v".
     Found 1-bit register for signal <twoClock>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <OPP> synthesized.
 
 Synthesizing Unit <topClrLed>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\top_lab7.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\top_lab7.v".
     Summary:
 	no macro.
 Unit <topClrLed> synthesized.
 
 Synthesizing Unit <Div256>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Div256.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Div256.v".
     Found 8-bit register for signal <count>.
     Found 8-bit adder for signal <count[7]_GND_8_o_add_2_OUT> created at line 31.
     Summary:
@@ -237,14 +237,14 @@ Synthesizing Unit <Div256>.
 Unit <Div256> synthesized.
 
 Synthesizing Unit <LFSR>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\LFSR.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\LFSR.v".
     Found 10-bit register for signal <lfsr>.
     Summary:
 	inferred  10 D-type flip-flop(s).
 Unit <LFSR> synthesized.
 
 Synthesizing Unit <MC>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\MC.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\MC.v".
         RESET = 0
         Wait_a = 1
         Wait_b = 2
@@ -271,7 +271,7 @@ Synthesizing Unit <MC>.
 Unit <MC> synthesized.
 
 Synthesizing Unit <scorer>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\scorer_template.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\scorer_template.v".
     Found 4-bit register for signal <state>.
 INFO:Xst:1799 - State 0000 is never reached in FSM <state>.
     Found finite state machine <FSM_1> for signal <state>.
@@ -292,13 +292,13 @@ INFO:Xst:1799 - State 0000 is never reached in FSM <state>.
 Unit <scorer> synthesized.
 
 Synthesizing Unit <LEDMux>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\LEDMux.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\LEDMux.v".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <LEDMux> synthesized.
 
 Synthesizing Unit <audio>.
-    Related source file is "C:\Users\germannagaev\Documents\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v".
+    Related source file is "\\ugradfs\brendanlucas\win\GitHub\TugOfWar\TugOfWarSoundAttempt\TugOfWarGame\Audio.v".
         clkdivider = 0
 WARNING:Xst:647 - Input <score<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <gain>.
@@ -685,12 +685,12 @@ createCLKdivide/clk|    3.722|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.71 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.80 secs
  
 --> 
 
-Total memory usage is 282912 kilobytes
+Total memory usage is 247140 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   17 (   0 filtered)

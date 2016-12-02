@@ -1,7 +1,7 @@
-Release 14.7 par P.20131013 (nt64)
+Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-STARK::  Fri Dec 02 02:10:41 2016
+ME4166-01::  Fri Dec 02 15:37:40 2016
 
 par -w -intstyle ise -ol high -mt off fullTop_map.ncd fullTop.ncd fullTop.pcf 
 
@@ -11,7 +11,9 @@ Loading device for application Rf_Device from file '6slx45.nph' in environment C
    "fullTop" is an NCD, version 3.2, device xc6slx45, package csg324, speed -3
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to '2100@134.117.38.248'.
-INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to '12345@134.117.38.248;27010@134.117.38.248;'.
+INFO:Security:52 - The LM_LICENSE_FILE environment variable is set to
+'27000@localhost;C:\Modeltech_xe\win32xoem\license.dat;6053@licensesrv;7053@cmc-stc-01;1055@134.117.70.208;1718@licenses
+rv;1707@licensesrv.doe.carleton.ca'.
 INFO:Security:54 - 'xc6slx45' is a WebPack part.
 WARNING:Security:43 - No license file was found in the standard Xilinx license directory.
 WARNING:Security:44 - Since no license file was found,
@@ -111,35 +113,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 3 secs 
-Finished initial Timing Analysis.  REAL time: 3 secs 
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
 
 Starting Router
 
 
-Phase  1  : 509 unrouted;      REAL time: 3 secs 
+Phase  1  : 509 unrouted;      REAL time: 6 secs 
 
-Phase  2  : 439 unrouted;      REAL time: 4 secs 
+Phase  2  : 439 unrouted;      REAL time: 7 secs 
 
-Phase  3  : 110 unrouted;      REAL time: 4 secs 
+Phase  3  : 110 unrouted;      REAL time: 7 secs 
 
-Phase  4  : 110 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  4  : 110 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
 Updating file: fullTop.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
-Total REAL time to Router completion: 5 secs 
-Total CPU time to Router completion: 5 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Total REAL time to Router completion: 9 secs 
+Total CPU time to Router completion: 6 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -179,10 +181,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 6 secs 
-Total CPU time to PAR completion: 5 secs 
+Total REAL time to PAR completion: 14 secs 
+Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  449 MB
+Peak Memory Usage:  354 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

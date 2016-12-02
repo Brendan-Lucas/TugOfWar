@@ -1,2 +1,0 @@
-verilog isim_temp "netgen/par/fullTop_timesim.v"
-verilog isim_temp "ToW_tb.v"
