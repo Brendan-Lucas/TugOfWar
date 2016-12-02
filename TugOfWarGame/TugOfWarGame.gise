@@ -267,7 +267,7 @@
     </transform>
     <transform xil_pn:end_ts="1480559374" xil_pn:in_ck="8245685593536292230" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1480559345">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -279,14 +279,14 @@
     </transform>
     <transform xil_pn:end_ts="1480560313" xil_pn:in_ck="161807808056551273" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1480560304">
       <status xil_pn:value="AbortedRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1480559386" xil_pn:in_ck="161807808056551273" xil_pn:name="TRAN_postParSimModel" xil_pn:prop_ck="-2108394690248540285" xil_pn:start_ts="1480559374">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -306,7 +306,7 @@
     </transform>
     <transform xil_pn:end_ts="1480559390" xil_pn:in_ck="-4410605378943776042" xil_pn:name="TRAN_ISimulatePostPlace&amp;RouteModelRunFuse" xil_pn:prop_ck="-6151419602665494181" xil_pn:start_ts="1480559386">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -317,7 +317,7 @@
     </transform>
     <transform xil_pn:end_ts="1480559390" xil_pn:in_ck="1774879671526014642" xil_pn:name="TRAN_ISimulatePostPlace&amp;RouteModel" xil_pn:prop_ck="7606046602346107503" xil_pn:start_ts="1480559390">
       <status xil_pn:value="AbortedRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForced"/>
@@ -325,7 +325,7 @@
     </transform>
     <transform xil_pn:end_ts="1480559374" xil_pn:in_ck="161807808056551273" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1480559362">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>

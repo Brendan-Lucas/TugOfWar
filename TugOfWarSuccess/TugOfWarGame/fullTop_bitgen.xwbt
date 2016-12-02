@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=W:\GitHub\TugOfWar\TugOfWarIssues\TugOfWarGame\fullTop.ncd
+OUTFILE=W:\GitHub\TugOfWar\TugOfWarIssues\TugOfWarGame\fullTop.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=W:\GitHub\TugOfWar\TugOfWarIssues\TugOfWarGame
+LICENSE=ISE
+USER_INFO=175173618_175294968_210578120_628

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-11-30T22:53:55</DateModified>
+  <DateModified>2016-12-01T20:42:19</DateModified>
   <ModuleName>fullTop</ModuleName>
   <SummaryTimeStamp>2016-11-30T22:53:48</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/alokdeshpande/Documents/TugOfWar-master/TugOfWar-master/TugOfWarGame/iseconfig/fullTop.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/alokdeshpande/Documents/TugOfWar-master/TugOfWar-master/TugOfWarGame\</ImplementationReportsDirectory>
+  <SavedFilePath>W:/GitHub/TugOfWar/TugOfWarGame/iseconfig/fullTop.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>W:/GitHub/TugOfWar/TugOfWarGame\</ImplementationReportsDirectory>
   <DateInitialized>2016-11-27T21:49:42</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
   <FilterFile/>
