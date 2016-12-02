@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Dec 01 21:30:03 2016
+// Written by: Map P.20131013 on Fri Dec 02 00:44:43 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -7,12 +7,14 @@ COMP "leds_out<0>" LOCATE = SITE "U18" LEVEL 1;
 COMP "CLK_I" LOCATE = SITE "L15" LEVEL 1;
 COMP "leds_out<1>" LOCATE = SITE "M14" LEVEL 1;
 COMP "leds_out<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "FTL_Left" LOCATE = SITE "E4" LEVEL 1;
 COMP "leds_out<3>" LOCATE = SITE "L14" LEVEL 1;
 COMP "leds_out<4>" LOCATE = SITE "M13" LEVEL 1;
 COMP "leds_out<5>" LOCATE = SITE "D4" LEVEL 1;
 COMP "leds_out<6>" LOCATE = SITE "P16" LEVEL 1;
 COMP "pbl" LOCATE = SITE "P4" LEVEL 1;
 COMP "pbr" LOCATE = SITE "F6" LEVEL 1;
+COMP "FTL_Right" LOCATE = SITE "A10" LEVEL 1;
 COMP "rst" LOCATE = SITE "F5" LEVEL 1;
 SCHEMATIC END;
 

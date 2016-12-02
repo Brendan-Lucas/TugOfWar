@@ -20,13 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Div256(clk, rst, slowen);
 	input rst, clk;
-	output slowen;
+	output wire slowen;
 	reg [7:0] count;
-	assign slowen = (count == 8'b11111111);
+	
+	assign slowen =& count;
+	
 	always @(posedge clk)
 	begin
-		if (rst) count <= 8'b00000000;
-		else if(count == 8'b11111111) count <= 8'b00000000;
-		else count<= count + 8'b00000001;
+		if (rst) count <= 0;
+		else count<= count +1;
 	end
 endmodule

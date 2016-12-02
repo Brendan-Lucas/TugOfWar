@@ -24,7 +24,7 @@ module synchronizer(push, clk, rst, sypush);
   reg sypush;
   always @(posedge clk)
     begin
-		if(rst) sypush = 0;
-		else sypush = push;
+		if(rst) sypush <= 0;
+		else sypush <= push;
     end
 endmodule

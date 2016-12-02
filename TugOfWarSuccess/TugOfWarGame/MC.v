@@ -21,17 +21,16 @@
 module MC(clk, rst, winrnd, rout, slowen, clear, leds_on, led_control);
 
 	input clk, rst, winrnd, rout, slowen;
-	output wire clear; output wire leds_on;
-	output wire [1:0] led_control;
-	
-	
-	
+	output reg clear; output reg leds_on;
+	output reg [1:0] led_control;
+
 	reg [2:0] nxt_st, state;
 	
 	parameter RESET=0, Wait_a=1, Wait_b=2, Dark=3, Play=4, Gloat_a=5, Gloat_b=6;
 	
-	always @(state or rst or slowen or winrnd or rout)
+	always @(rst or slowen or winrnd or rout)
 	begin
+		nxt_st<=state;
 		case(state)
 			RESET: if(!rst) nxt_st <= Wait_a; else nxt_st <= RESET;
 			Wait_a: begin repeat (2) @(slowen); if(slowen) nxt_st <= Wait_b; else nxt_st <= Wait_a; end
@@ -49,13 +48,13 @@ module MC(clk, rst, winrnd, rout, slowen, clear, leds_on, led_control);
 		if (rst) state <= RESET;
 		else state <= nxt_st;
 	end
-	
+/*	
 	assign led_control[0] = (state==RESET || state==Wait_a || state==Wait_b);
 	assign led_control[1] = ~(state==Dark);
 	assign clear = ~(state==Dark || state==Play);
 	assign leds_on = ~(state==Dark);
 	
-/*
+
 	always @(state)
 	begin 
 		led_control[0] <= (state==RESET || state==Wait_a || state==Wait_b);
@@ -64,12 +63,12 @@ module MC(clk, rst, winrnd, rout, slowen, clear, leds_on, led_control);
 		leds_on <= ~(state==Dark);
 	end; 
 */
-	/*always@(state)
+	always@(state)
 	begin
 		case(state)
 			RESET: 
 				begin
-					leds_on <= 1; clear <= 1; //led_control <= 2'b11;
+					leds_on <= 1; clear <= 1; led_control <= 2'b11;
 				end
 			Wait_a:
 				begin
@@ -101,6 +100,6 @@ module MC(clk, rst, winrnd, rout, slowen, clear, leds_on, led_control);
 				end
 		endcase 
 		
-	end */
+	end 
 	
 endmodule

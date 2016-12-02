@@ -22,16 +22,15 @@ module OPP(sypush, clk, rst, winrnd);
   input sypush, clk, rst;
   output winrnd;
   
-  reg twoClock = 0;
-  assign winrnd = sypush &~twoClock;
+  reg twoClock;
+  assign winrnd = sypush & ~twoClock;
   
   
   
 	always@(posedge clk or posedge rst)
 	begin 
-		if(rst) twoClock=0;
-	  else twoClock = winrnd;
+		if(rst) twoClock <=0;
+	  else twoClock <= sypush;
 	end 
 	
-	//end
 endmodule

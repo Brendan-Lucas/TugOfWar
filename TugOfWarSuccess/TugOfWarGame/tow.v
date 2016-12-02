@@ -6,6 +6,8 @@ module tow(
     input CLK_I,
     input rst,
     output [6:0] Led
+	 //input FTL_Right,
+	 //input FTL_Left
     );
 //Complete wire signals needed below ???
 
