@@ -22,6 +22,9 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="TugOfWarGame.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ToW_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ToW_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ToW_tb_isim_beh.wdb"/>
     <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ToW_tb_isim_par.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ToW_tb_isim_par.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ToW_tb_par.prj"/>
@@ -71,7 +74,14 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="fulltop.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
-    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd">
+      <branch xil_pn:name="BehavioralSim"/>
+      <branch xil_pn:name="PostRouteSimulation"/>
+    </file>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log">
+      <branch xil_pn:name="BehavioralSim"/>
+      <branch xil_pn:name="PostRouteSimulation"/>
+    </file>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
     <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/par/fullTop_timesim.nlf"/>
     <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="netgen/par/fullTop_timesim.v"/>
@@ -79,14 +89,93 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
-    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini">
+      <branch xil_pn:name="BehavioralSim"/>
+      <branch xil_pn:name="PostRouteSimulation"/>
+    </file>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1480646956" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1480646956">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1480646956" xil_pn:in_ck="-5586535682625238800" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1480646956">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Div256.v"/>
+      <outfile xil_pn:name="LEDMux.v"/>
+      <outfile xil_pn:name="LFSR.v"/>
+      <outfile xil_pn:name="MC.v"/>
+      <outfile xil_pn:name="OPP.v"/>
+      <outfile xil_pn:name="PBL.v"/>
+      <outfile xil_pn:name="PblPbrInst_tb.v"/>
+      <outfile xil_pn:name="ToW_tb.v"/>
+      <outfile xil_pn:name="clk_div.v"/>
+      <outfile xil_pn:name="fullTop.v"/>
+      <outfile xil_pn:name="scorer_template.v"/>
+      <outfile xil_pn:name="synchronizer.v"/>
+      <outfile xil_pn:name="topClr&amp;leds.v"/>
+      <outfile xil_pn:name="top_lab7.v"/>
+      <outfile xil_pn:name="tow.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1480646956" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="731574351102722694" xil_pn:start_ts="1480646956">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1480646956" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-4459601530608277948" xil_pn:start_ts="1480646956">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1480646956" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-619515888009426836" xil_pn:start_ts="1480646956">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1480646956" xil_pn:in_ck="-5586535682625238800" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1480646956">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Div256.v"/>
+      <outfile xil_pn:name="LEDMux.v"/>
+      <outfile xil_pn:name="LFSR.v"/>
+      <outfile xil_pn:name="MC.v"/>
+      <outfile xil_pn:name="OPP.v"/>
+      <outfile xil_pn:name="PBL.v"/>
+      <outfile xil_pn:name="PblPbrInst_tb.v"/>
+      <outfile xil_pn:name="ToW_tb.v"/>
+      <outfile xil_pn:name="clk_div.v"/>
+      <outfile xil_pn:name="fullTop.v"/>
+      <outfile xil_pn:name="scorer_template.v"/>
+      <outfile xil_pn:name="synchronizer.v"/>
+      <outfile xil_pn:name="topClr&amp;leds.v"/>
+      <outfile xil_pn:name="top_lab7.v"/>
+      <outfile xil_pn:name="tow.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1480646960" xil_pn:in_ck="-5586535682625238800" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5896339555760931669" xil_pn:start_ts="1480646956">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ToW_tb_beh.prj"/>
+      <outfile xil_pn:name="ToW_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1480646960" xil_pn:in_ck="1774879653590145438" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8394376207308730290" xil_pn:start_ts="1480646960">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ToW_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
     <transform xil_pn:end_ts="1480645348" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1480645348">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1480645348" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3388705573894090299" xil_pn:start_ts="1480645348">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -147,6 +236,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="fullTop.pcf"/>
       <outfile xil_pn:name="fullTop_map.map"/>
@@ -171,7 +262,7 @@
       <outfile xil_pn:name="fullTop_pad.txt"/>
       <outfile xil_pn:name="fullTop_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1480645933" xil_pn:in_ck="161807808056551273" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="396117104113915555" xil_pn:start_ts="1480645918">
+    <transform xil_pn:end_ts="1480647109" xil_pn:in_ck="161807808056551273" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1480647094">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -202,19 +293,22 @@
     <transform xil_pn:end_ts="1480645839" xil_pn:in_ck="5616429741819024463" xil_pn:name="TRAN_ISimulatePostPlace&amp;RouteModelRunFuse" xil_pn:prop_ck="-2591000032407249013" xil_pn:start_ts="1480645833">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ToW_tb_isim_par.exe"/>
       <outfile xil_pn:name="ToW_tb_par.prj"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1480645840" xil_pn:in_ck="1774879671526014642" xil_pn:name="TRAN_ISimulatePostPlace&amp;RouteModel" xil_pn:prop_ck="6092600482535580831" xil_pn:start_ts="1480645839">
+    <transform xil_pn:end_ts="1480647025" xil_pn:in_ck="1774879671526014642" xil_pn:name="TRAN_ISimulatePostPlace&amp;RouteModel" xil_pn:prop_ck="6092600482535580831" xil_pn:start_ts="1480647025">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ToW_tb_isim_par.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
     <transform xil_pn:end_ts="1480645827" xil_pn:in_ck="-7875955074810151710" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1480645821">
       <status xil_pn:value="SuccessfullyRun"/>

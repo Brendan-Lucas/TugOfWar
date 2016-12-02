@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "simprims_ver" -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "W:/GitHub/TugOfWar/TugOfWarIssues/TugOfWarGame/ToW_tb_isim_par.exe" -prj "W:/GitHub/TugOfWar/TugOfWarIssues/TugOfWarGame/ToW_tb_par.prj" "work.ToW_tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "W:/GitHub/TugOfWar/TugOfWarSuccess/TugOfWarGame/ToW_tb_isim_beh.exe" -prj "W:/GitHub/TugOfWar/TugOfWarSuccess/TugOfWarGame/ToW_tb_beh.prj" "work.ToW_tb" "work.glbl" 

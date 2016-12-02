@@ -1,5 +1,5 @@
 ISim log file
-Running: W:\GitHub\TugOfWar\TugOfWarIssues\TugOfWarGame\ToW_tb_isim_par.exe -intstyle ise -gui -tclbatch isim.cmd -wdb W:/GitHub/TugOfWar/TugOfWarIssues/TugOfWarGame/ToW_tb_isim_par.wdb 
+Running: W:\GitHub\TugOfWar\TugOfWarSuccess\TugOfWarGame\ToW_tb_isim_par.exe -intstyle ise -gui -tclbatch isim.cmd -wdb W:/GitHub/TugOfWar/TugOfWarSuccess/TugOfWarGame/ToW_tb_isim_par.wdb 
 ISim P.20131013 (signature 0x8ef4fb42)
 ----------------------------------------------------------------------
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to '2100@134.117.38.248'.
@@ -21,3 +21,40 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 INFO: SDF backannotation was successful with SDF file netgen/par/fulltop_timesim.sdf, for root module /ToW_tb/fullTopInst/.
 Finished circuit initialization process.
+# run 10s
+
+Testing R1
+ leds_out =   4
+
+Testing R2
+ leds_out =   2
+
+Testing R3
+ leds_out =   1
+
+Testing R2
+ leds_out =   4
+
+Testing R1
+ leds_out =   8
+
+Testing N
+ leds_out =  16
+
+Testing L1
+ leds_out =  32
+
+Testing L2
+ leds_out =  64
+
+Testing L3
+ leds_out = 112
+
+Testing R2
+ leds_out =   4
+
+Testing R1
+ leds_out =   8
+
+Testing N
+ leds_out =  16
